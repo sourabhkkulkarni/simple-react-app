@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+}
+
+.div1,
+.div2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  background-color: lightgray;
+}
+
+.div1::after,
+.div2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(10% - 10px); /* Adjust this value to control the length of the line */
+  height: 1px;
+  background-color: black;
+}
+
+.div1::after {
+  right: 100%;
+  margin-right: 10px; /* Adjust this value to control the spacing between div1 and the line */
+}
+
+.div2::before {
+  left: 100%;
+  margin-left: 10px; /* Adjust this value to control the spacing between the line and div2 */
+}
